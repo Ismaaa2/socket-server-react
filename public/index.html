@@ -62,10 +62,8 @@
       const txtMessage = document.querySelector('#txtMessage');
 
       form.addEventListener('submit', (ev) => {
-        ev.preventDefault();
 
-        //INTERNET EXPLORER !!
-        event.returnValue = false;
+        event.preventDefault ? event.preventDefault() : (event.returnValue = false);
         
         const newMessage = txtMessage.value;
 
