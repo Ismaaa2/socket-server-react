@@ -63,6 +63,9 @@
 
       form.addEventListener('submit', (ev) => {
         ev.preventDefault();
+
+        //INTERNET EXPLORER !!
+        event.returnValue = false;
         
         const newMessage = txtMessage.value;
 
